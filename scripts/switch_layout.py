@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # credits: https://github.com/yamnikov-oleg/switch-layout
 
+# apt install python3-pip
+# pip3 install pynput
+
 import subprocess
 
 from pynput import keyboard
