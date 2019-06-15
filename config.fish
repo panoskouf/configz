@@ -18,7 +18,7 @@ alias sudo='sudo ';
 
 # TODO: launch emacs with nohup
 function emacs --wraps emacs26
-    # --wraps inherits autocompletes
+    # --wraps inherits autocompletion
     env XLIB_SKIP_ARGB_VISUALS=1 emacs26 $argv;
 end
 alias e='emacs';
