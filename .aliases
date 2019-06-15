@@ -1,0 +1,87 @@
+
+# --------------------------- commands -------------------------------------
+# alias sc="sudo /etc/init.d/screen-cleanup start && screen -S name"
+alias emacs="XLIB_SKIP_ARGB_VISUALS=1 emacs"
+alias emx="emacs -nw "
+alias upd="sudo apt-fast update"
+alias upg="sudo apt-fast upgrade"
+alias py3="python3"
+
+# --------------------------- gpg -------------------------------------
+. ~/.sh_vars
+
+alias enc="gpg2 -e -r $MAIL"
+alias enc2="gpg2 -e -r "
+
+function dec {
+  file=$1
+  fileNew=${file%????}
+  gpg2 -d $file > $fileNew
+  rm $file
+}
+
+alias enc-all-org="gpg2 -r $MAIL --encrypt-files *.org && shred -u *.org"
+alias dec-all="gpg2 --decrypt-files *.gpg && rm *.gpg"
+
+# --------------------------- misc -------------------------------------
+# alert when task finish example:   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+#youtube-dl
+alias ytdl="youtube-dl --ignore-errors -o '%(title)s.%(ext)s'"
+alias ytformat="youtube-dl -F"
+alias ytdlaudio="youtube-dl -f bestaudio --ignore-errors -o '%(title)s.%(ext)s'"
+
+# Get week number
+alias week='date +%V'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Flatpack
+alias flDesDir='/var/lib/flatpak/exports/share/applications/'
+# override desktop files from here to ~/.local/share/applications/
+
+# --------------------------- git -------------------------------------
+alias g="git"
+alias ga="git add"
+alias gap="git add -p"
+alias gb="git branch"
+alias gc="git commit"
+alias gcl="git clone"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gl="git log --graph --decorate --oneline --abbrev-commit"
+alias gla="git log --graph --decorate --oneline --abbrev-commit --all"
+alias gm="git merge"
+alias gu="git push"
+# alias guu"sh update.sh && git add . && git commit -m 'updates' && git push"
+alias gd="git pull"
+alias gdnr="git pull --no-rebase"
+alias gr="git reset"
+alias gs="git status -sb"
+
+
+# --------------------------- colors -------------------------------------
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+colorflag="--color"
+# List all files colorized in long format
+alias l="ls -lF ${colorflag}"
+# List all files colorized in long format, including dot files
+alias la="ls -laF ${colorflag}"
+# List only directories
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+# Always use color output for `ls`
+alias ls="command ls ${colorflag}"

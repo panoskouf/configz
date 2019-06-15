@@ -1,0 +1,3 @@
+set VARS_SOURCED true
+set MAIL '#$(@#'
+set PROFILE '#@$'
