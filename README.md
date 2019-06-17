@@ -1,6 +1,6 @@
-if you are just checking this out, see summon.sh to get an idea of the original location of each file
+if you are just checking this out, see summon.sh to get an idea of the original location for each file
 
-### Useful Random Links  
+### Useful Random Links
 - [elementary-tweaks](https://github.com/elementary-tweaks/elementary-tweaks)
 - [plank zoom effect](https://launchpad.net/~ricotz/+archive/ubuntu/docky)
 - [albert launcher](https://github.com/albertlauncher/albert)

@@ -1,0 +1,119 @@
+[
+  {
+    "key": "ctrl+shift+/",
+    "command": "redo",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+e 1",
+    "command": "eslint.disable"
+  },
+  {
+    "key": "ctrl+alt+e 2",
+    "command": "eslint.enable"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.quit"
+  },
+  {
+    "key": "ctrl+numpad8 ctrl+numpad9",
+    "command": "workbench.action.closeEditorInAllGroups"
+  },
+
+  // emacs like:
+  {
+    "key": "ctrl+x ctrl+c",
+    "command": "workbench.action.quit"
+  },
+  // {
+  //   "key": "ctrl+x ctrl+b", // does not work
+  //   "command": "-workbench.action.showAllEditors"
+  // },
+  {
+    "key": "ctrl+x b",
+    "command": "workbench.action.previousEditor"
+  },
+  // fix find widget for emacs
+  {
+    "key": "ctrl+numpad8 ctrl+numpad9",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+numpad8 ctrl+numpad9",
+    "command": "-redo",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "editor.action.clipboardCutAction",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "alt+w",
+    "command": "editor.action.clipboardCopyAction", // emacs-mcx.copyRegion
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "alt+w",
+    "command": "-closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+numpad8 ctrl+numpad9",
+    "command": "workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+numpad8 ctrl+numpad9",
+    "command": "workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+numpad8 ctrl+numpad9",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+numpad8 ctrl+numpad9",
+    "command": "workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+numpad8 ctrl+numpad9",
+    "command": "editor.action.clipboardCutAction",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "-editor.action.clipboardCutAction",
+    "when": "textInputFocus && !editorReadonly"
+  },
+]

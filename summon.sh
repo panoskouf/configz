@@ -17,4 +17,10 @@ mkdir scripts
 rm -rf scripts/*
 cp -rf /usr/local/scripts/* scripts
 
+mkdir vscode
+rm -rf vscode/*
+cp -rf ~/.config/Code/User/* vscode
+rm -rf vscode/globalStorage
+rm -rf vscode/workspaceStorage
+
 # todo..

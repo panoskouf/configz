@@ -1,0 +1,45 @@
+{
+  "Print to console": {
+    "prefix": "_log",
+    "body": [
+        "console.log('$0');",
+    ],
+    "description": "Log output to console"
+  },
+
+  "debugger": {
+    "prefix": "_db",
+    "body": [
+      "debugger;",
+      "$0"
+    ]
+  },
+
+  "Destructuring Props": {
+    "prefix": "_dp",
+    "body": [
+      "const { $0 } = this.props;"
+    ],
+    "description": "destructure props"
+  },
+
+  "Destructuring State": {
+    "prefix": "_ds",
+    "body": [
+      "const { $0 } = this.state;"
+    ],
+    "description": "destructure State"
+  },
+
+  "Import connect from react-redux": {
+    "prefix": "_iconrr",
+    "body": "import { connect } from 'react-redux';"
+  },
+
+  "Declare MapStateToProps": {
+    "prefix": "_mstp",
+    "body": [
+      "const mstp = {$0} => {$0};",
+    ]
+  }
+}

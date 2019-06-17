@@ -1,0 +1,64 @@
+{
+    "window.titleBarStyle": "custom",
+    "git.ignoreMissingGitWarning": true,
+    "editor.fontSize": 20,
+    "editor.cursorStyle": "block",
+    "editor.fontWeight": "600",
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "[html]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2
+    },
+    "workbench.list.multiSelectModifier": "alt",
+    "editor.emptySelectionClipboard": false,
+    "editor.find.seedSearchStringFromSelection": false,
+    "editor.occurrencesHighlight": true,
+    "editor.stablePeek": true,
+    "editor.wordWrap": "on",
+    "explorer.openEditors.visible": 0,
+    "workbench.iconTheme": "material-icon-theme",
+    "window.enableMenuBarMnemonics": false,
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": -1,
+    "eslint.options": {
+      "configFile": ".eslintrc.json"
+    },
+    "workbench.colorCustomizations": {
+    "editorWarning.foreground": "#ff0",
+    "editorInfo.foreground": "#00f"
+    },
+    "workbench.colorTheme": "Primer Light",
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/*/**": true
+    },
+    // show settings.json by default
+    "workbench.settings.useSplitJSON": true,
+    // php
+    // Controls whether the built-in PHP language suggestions are enabled. The support suggests PHP globals and variables. // false because of PHP Intelephense
+    "php.suggest.basic": false,
+
+    // Enable/disable built-in PHP validation.
+    "php.validate.enable": true,
+    "files.associations": {
+      "*.module": "php",
+    },
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "workbench.editor.labelFormat": "short",
+    "files.exclude": {
+      "**/node_modules": true
+    },
+    "extensions.ignoreRecommendations": false,
+  }
+
+  // plugins: Awesome Emacs Keymap, Color Highlight, Eslint
+  // themes: Primal, Primer Light, Atom One Dark Theme, Atom One Light
+  // Material Icon Theme,  VSCode Great Icons
