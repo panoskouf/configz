@@ -42,6 +42,11 @@
   },
   {
     "key": "ctrl+y",
+    "command": "editor.action.clipboardPasteAction", // emacs-mcx.yank
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+y",
     "command": "-closeFindWidget",
     "when": "editorFocus && findWidgetVisible"
   },
@@ -83,6 +88,14 @@
   {
     "key": "ctrl+numpad8 ctrl+numpad9",
     "command": "workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+x k",
+    "command": "-workbench.action.closeActiveEditor"
   },
   {
     "key": "ctrl+shift+w",
