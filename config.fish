@@ -16,10 +16,8 @@ test -f $HOME/.sh_vars_fish
 
 alias sudo='sudo ';
 
-# TODO: launch emacs with nohup
 function emacs --wraps emacs26
-    # --wraps inherits autocompletion
-    env XLIB_SKIP_ARGB_VISUALS=1 emacs26 $argv;
+    nohup env XLIB_SKIP_ARGB_VISUALS=1 emacs26 $argv[1] >/dev/null 2>&1 &
 end
 alias e='emacs';
 alias sue='sudo emacs';
