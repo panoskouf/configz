@@ -8,6 +8,7 @@ cp -rf ~/.bash_prompt .
 cp -rf ~/.dircolors .
 cp -rf ~/.emacs.d/init.el .
 cp -rf ~/.config/fish/config.fish .
+cp -rf ~/.XCompose .
 
 mkdir plank_themes
 rm -rf plank_themes/*

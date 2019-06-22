@@ -46,18 +46,20 @@ alias trx='tree -c --sort=name -L ';
 function g --wraps git
     git $argv;
 end
+alias g.='git add .'
 alias ga='git add'
 alias gap='git add -p'
 alias gb='git branch'
 alias gc='git commit'
-alias gcl='git clone'
 alias gcm='git commit -m'
+alias gcl='git clone'
 alias gco='git checkout'
-alias gd='git diff'
-alias gds='git diff --staged'
+alias g~='git diff'
+alias g~~='git diff --staged'
 alias gl='git log --graph --decorate --oneline --abbrev-commit'
 alias gla='git log --graph --decorate --oneline --abbrev-commit --all'
 alias gm='git merge'
+alias gma='git merge --abort'
 alias gu='git push'
 alias gd='git pull'
 alias gdr='git pull --rebase'
@@ -73,22 +75,27 @@ function gw
         set r (cat .git/config | grep name)
         if [ $r ]
             set r (string split ' ' $r)
-            echo ' -- '$r[3]
+            echo '      '$r[3]
         else
-            echo ' -- Global User'
+            echo '      Global User'
         end
     else
-        echo ' -- not a git repo'
+        echo '      not a git repo'
     end
 end
 
 # TODO: https://superuser.com/questions/199507/how-do-i-ensure-git-doesnt-ask-me-for-my-github-username-and-password
 if [ $VARS_SOURCED ]
-    function gpanoskouf
-        git init
+    function gpanos
         git config user.name $USER
         git config user.email $MAIL
-        echo ' -- set PERSONAL credentials for git'
+        echo '     PERSONAL credentials for git configured.'
+    end
+
+    function gwork
+        git config user.name $USER_WORK
+        git config user.email $MAIL_WORK
+        echo '     WORK credentials for git configured.'
     end
 end
 
@@ -115,6 +122,6 @@ alias downloads='cd ~/downloads';
 alias images='cd ~/media/images';
 alias music='cd ~/media/music';
 alias movies='cd ~/media/movies\ \&\ series/';
-alias projects='cd ~/documents/projects';
-alias scripts='cd /usr/local/scripts';
-alias docs='cd ~/documentation';
+alias p='cd ~/documents/projects; and l';
+alias scripts='cd /usr/local/scripts; and l';
+alias docs='cd ~/documentation; and l';
