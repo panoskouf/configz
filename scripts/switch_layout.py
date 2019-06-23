@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+
+# keys in page 13 https://buildmedia.readthedocs.org/media/pdf/pynput/latest/pynput.pdf
+
 # credits: https://github.com/yamnikov-oleg/switch-layout
+
 
 # apt install python3-pip
 # pip3 install pynput
@@ -12,10 +16,10 @@ from pynput import keyboard
 SWITCH_SHORTCUTS = [
     # For some reason Alt pressed after Shift gets registered as a different
     # key code on my system.
-    {keyboard.KeyCode(65511)},  # Shift + Alt
+    #{keyboard.KeyCode(65511)},  # Shift + Alt
     #{keyboard.Key.alt, keyboard.Key.shift},  # Alt + Shift
-    {keyboard.Key.alt, keyboard.Key.space},  # Alt + Space
-
+    #{keyboard.Key.alt, keyboard.Key.space},  # Alt + Space
+    {keyboard.Key.alt_r},
     # Examples
     # {keyboard.Key.shift, keyboard.Key.ctrl},  # Shift + Ctrl
     # {keyboard.Key.cmd, keyboard.Key.space},  # Super + Space

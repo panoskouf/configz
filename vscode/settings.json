@@ -34,7 +34,7 @@
     "editorWarning.foreground": "#ff0",
     "editorInfo.foreground": "#00f"
     },
-    "workbench.colorTheme": "Primer Light",
+    "workbench.colorTheme": "Primal",
     "files.watcherExclude": {
       "**/.git/objects/**": true,
       "**/.git/subtree-cache/**": true,

@@ -1,11 +1,17 @@
+# https://unix.stackexchange.com/questions/118122/keypad-plus-and-minus-names-in-xcompose
 # original: https://gist.github.com/m93a/9b2056cb867f08a3fddce0004200841a
 
 # Emoji
 # http://unicode.org/emoji/charts/full-emoji-list.html
 
+<Multi_key> <z> <a> <p>              : "⚡"
+<Multi_key> <f> <i> <r> <e>          : "🔥"
+<Multi_key> <s> <t> <a> <r> <1>      : "⭐"
+<Multi_key> <s> <t> <a> <r> <2>      : "🌟"
+<Multi_key> <s> <t> <a> <r> <3>      : "🌠"
+<Multi_key> <b> <e> <e> <r> <s>      : "🍻"
 <Multi_key> <colon> <D>              : "😀"
 <Multi_key> <x> <D>                  : "😁"
-<Multi_key> <x> <apostrophe> <D>     : "😂"
 <Multi_key> <colon> <j>              : "😂"
 <Multi_key> <r> <o> <f> <l>          : "🤣"
 <Multi_key> <colon> <d>              : "😃"
@@ -89,7 +95,24 @@
 <Multi_key> <less> <3>               : "❤"
 <Multi_key> <less> <KP_3>            : "❤"
 <Multi_key> <less> <greater>         : "♢"
-<Multi_key> <p> <a> <r> <t> <y>      : "🎉"
+<Multi_key> <p> <a> <r> <t> <y> <1>  : "🎉"
+<Multi_key> <p> <a> <r> <t> <y> <2>  : "🎊"
+<Multi_key> <m> <e> <m> <o>          : "📝"
+<Multi_key> <c> <h> <e> <c> <k>      : "✔"
+<Multi_key> <c> <r> <o> <s> <s>      : "❌"
+<Multi_key> <s> <y> <m> <c>          : "©"
+<Multi_key> <s> <y> <m> <r>          : "®"
+<Multi_key> <s> <y> <m> <t>          : "™"
+<Multi_key> <q> <u> <i> <t>          : "🏳"
+<Multi_key> <g> <r>                  : "🇬🇷"
+<Multi_key> <c> <r> <o> <w> <n>      : "👑"
+<Multi_key> <d> <i> <r> <e> <c> <t>  : "🎯"
+<Multi_key> <s> <r> <u> <g>          : "🤷‍♂️"
+<Multi_key> <e> <y> <e> <1>          : "👁"
+<Multi_key> <e> <y> <e> <s>          : "👀"
+<Multi_key> <m> <m> <u> <s> <c> <l> <e>  : "💪"
+<Multi_key> <c> <l> <a> <p>          : "👏"
+<Multi_key> <u> <p>                  : "👆"
 
 <Multi_key> <bracketleft> <A> <bracketright>  : "🅰️"
 <Multi_key> <bracketleft> <B> <bracketright>  : "🅱️"
@@ -98,3 +121,10 @@
 
 <Multi_key> <b> <i> <k> <e>          : "🚴"
 <Multi_key> <b> <o> <o> <k>          : "📙"
+
+# need fix:
+<Multi_key> <r> <o> <c> <k> <e> <t>  : "🚀"
+<Multi_key> <$>                      : "💲"
+<Multi_key> <b> <$>                  : "💰"
+<Multi_key> <s> <$>                  : "💵"
+<Multi_key> <f> <s> <$>              : "💸"

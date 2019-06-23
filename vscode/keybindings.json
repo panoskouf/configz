@@ -129,4 +129,12 @@
     "command": "-editor.action.clipboardCutAction",
     "when": "textInputFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+alt+t",
+    "command": "workbench.action.selectTheme"
+  },
+  {
+    "key": "ctrl+k ctrl+t",
+    "command": "-workbench.action.selectTheme"
+  },
 ]

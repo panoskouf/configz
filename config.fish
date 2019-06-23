@@ -28,7 +28,7 @@ alias l='ls -a --color=auto -I \'.\' -I \'..\' ';
 alias ll='ls -lah --color=auto -I \'.\' -I \'..\' ';
 
 # dev specific
-alias hs='emacs -nw /etc/hosts';
+alias hs='sudo emacs /etc/hosts';
 alias c='code .';
 alias d='env BROWSER=none npm run dev';
 
