@@ -7,6 +7,8 @@
 
 # themes: toaster batman scorphish
 
+# zip/rar commands https://files.slack.com/files-pri/T06RGB4BU-FKWB8DVBN/-.txt
+
 set fish_greeting ""
 
 # import vars
