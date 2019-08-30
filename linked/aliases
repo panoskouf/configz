@@ -1,3 +1,4 @@
+# old aliases - TODO: update according to init.fish
 
 # --------------------------- commands -------------------------------------
 # alias sc="sudo /etc/init.d/screen-cleanup start && screen -S name"
@@ -8,7 +9,7 @@ alias upg="sudo apt-fast upgrade"
 alias py3="python3"
 
 # --------------------------- gpg -------------------------------------
-. ~/.sh_vars
+. ~/sh_vars
 
 alias enc="gpg2 -e -r $MAIL"
 alias enc2="gpg2 -e -r "

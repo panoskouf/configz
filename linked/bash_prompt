@@ -104,15 +104,16 @@ else
 	hostStyle="${yellow}";
 fi;
 
+# light theme only for now:
 # Set the terminal title and prompt.
 PS1="\[\033]0;\W\007\]"; # working directory base name
 PS1+="\[${bold}\]\n"; # newline
 PS1+="\[${userStyle}\]\u"; # username
-PS1+="\[${white}\] in ";
+PS1+="\[${black}\] in ";
 PS1+="\[${violet}\]\W"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] on \[${blue}\]\" \"\[${cyan}\]\")"; # Git repository details
+PS1+="\$(prompt_git \"\[${black}\] on \[${blue}\]\" \"\[${cyan}\]\")"; # Git repository details
 PS1+="\n";
-PS1+="\[${white}\] >_\$ \[${reset}\]"; # `$` (and reset color)
+PS1+="\[${black}\] >_\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";

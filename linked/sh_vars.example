@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# rename me to sh_vars
+
 # secret 🤫
 
 MAIL="some email"
