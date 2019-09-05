@@ -1,11 +1,14 @@
 # archive utils
+
+# alias for rar,zip are you sure you want unzip and not unzip1?
 function rar1 --wraps rar
     if test ( count $argv ) -ne 1
         echo "rar1 expects one argument"
         return 1
     end
 
-    rar a $argv[1].rar $argv[1]
+    set newfile (string replace / "" "$argv[1]")
+    rar a $newfile.rar $argv[1]
 end
 
 function unrar1 --wraps unrar
@@ -46,7 +49,8 @@ function zip1p --wraps zip
         return 1
     end
 
-    zip --encrypt -r $argv[1].zip $argv[1]
+    set newfile (string replace / "" "$argv[1]")
+    zip --encrypt -r $newfile.zip $argv[1]
 end
 
 function zip1 --wraps zip
@@ -55,7 +59,8 @@ function zip1 --wraps zip
         return 1
     end
 
-    zip -r $argv[1].zip $argv[1]
+    set newfile (string replace / "" "$argv[1]")
+    zip -r $newfile.zip $argv[1]
 end
 
 # extracts to a directory with the same name of zipfile

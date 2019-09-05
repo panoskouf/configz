@@ -16,6 +16,10 @@ test -f $DIR/fish_vars
   and source $DIR/fish_vars
   or echo 'could not find file' $DIR/fish_vars
 
+test -f $DIR/gitignored.fish
+  and source $DIR/gitignored.fish
+  or echo 'could not find file' $DIR/gitignored.fish
+
 source $DIR/git_utils.fish
 source $DIR/archive_utils.fish;
 source $DIR/themes.fish;
@@ -37,11 +41,16 @@ alias drives='df -h';
 alias usage='du -h -d1'
 
 # dev specific
-alias hs='emacs -nw /etc/hosts'
 alias c='code .'
 alias d='env BROWSER=none npm run dev'
 alias chrome-no-cors='cd ~/scratch; and google-chrome --disable-web-security --user-data-dir=~/scratch'
+alias _~='sudo apt update'
+alias _~~='sudo apt upgrade'
+alias _~l='sudo apt list --upgradable'
+alias hs='emacs -nw /etc/hosts'
+alias vwh='cd /var/www/html/';
 alias lan-ip="hostname -I | cut -d' ' -f1"
+alias ex='exit';
 
 # other
 alias nomnom='rm -rf '
@@ -81,13 +90,6 @@ alias gcl='g clone'
 alias gco='g checkout'
 alias gm='g merge'
 alias gr='g reset'
-
-
-# dont loose drupal workspace settings
-alias ss='pwd; and g stash push -m drupal_settings sites/default/settings.php'; # then use gdr gsp
-
-# pc dirs
-alias vwh='cd /var/www/html/';
 
 #switch (uname)
 #   case Darwin

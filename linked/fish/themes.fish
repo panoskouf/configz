@@ -1,4 +1,3 @@
-
 function _change_theme
     rm $DIR/fish_prompt.fish
     omf theme $argv[1]
@@ -45,7 +44,7 @@ end
 
 # set light theme
 function _l1
-
+    set DIR (dirname (readlink -m (status --current-filename)))
     # todo custom dircolors per theme # dircolors config in init.fish for now
     # for these one use the same but make it not bold
 

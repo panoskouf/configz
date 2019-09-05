@@ -84,5 +84,27 @@
 (setq default-input-method "greek")
 (setq ring-bell-function 'ignore)
 
+;; increase/decrease font size
+(global-set-key (kbd "C-=") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
 
-;; (nyan-mode 1)
+;; https://emacs.stackexchange.com/questions/2568/problem-dead-acute-is-undefined-appearing-when-typing-greek-stress
+(global-set-key (kbd "<dead-acute> α") "ά")
+(global-set-key (kbd "<dead-acute> ο") "ό")
+(global-set-key (kbd "<dead-acute> υ") "ύ")
+(global-set-key (kbd "<dead-acute> η") "ή")
+(global-set-key (kbd "<dead-acute> ι") "ί")
+(global-set-key (kbd "<dead-acute> ε") "έ")
+
+
+(nyan-mode 1)
+
+;; org-mode customization
+
+(require 'org)
+
+(setcar (nthcdr 4 org-emphasis-regexp-components) 10)
+;;(setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")
+
+;; this setting should be placed last
+(org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
