@@ -43,7 +43,7 @@ alias usage='du -h -d1'
 # dev specific
 alias c='code .'
 alias d='env BROWSER=none npm run dev'
-alias chrome-no-cors='cd ~/scratch; and google-chrome --disable-web-security --user-data-dir=~/scratch'
+alias chrome-no-cors='cd ~/scratch; and nohup google-chrome --disable-web-security --user-data-dir=~/scratch > /dev/null 2>&1 &; prevd'
 alias _~='sudo apt update'
 alias _~~='sudo apt upgrade'
 alias _~l='sudo apt list --upgradable'

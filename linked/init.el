@@ -16,7 +16,7 @@
 ;; --------------------------------------
 
 ;; set font for linux
-(set-frame-font "Liberation Mono 12" nil t)
+(set-frame-font "Liberation Mono 14" nil t)
 
 ;; backup config for emacs files
 (setq backup-directory-alist `(("." . "~/.backup/emacs")))
@@ -90,21 +90,34 @@
 
 ;; https://emacs.stackexchange.com/questions/2568/problem-dead-acute-is-undefined-appearing-when-typing-greek-stress
 (global-set-key (kbd "<dead-acute> α") "ά")
+(global-set-key (kbd "<dead-acute> Α") "Ά")
 (global-set-key (kbd "<dead-acute> ο") "ό")
+(global-set-key (kbd "<dead-acute> Ο") "Ό")
+(global-set-key (kbd "<dead-acute> ω") "ώ")
+(global-set-key (kbd "<dead-acute> Ω") "Ώ")
 (global-set-key (kbd "<dead-acute> υ") "ύ")
+(global-set-key (kbd "<dead-acute> Υ") "Ύ")
 (global-set-key (kbd "<dead-acute> η") "ή")
+(global-set-key (kbd "<dead-acute> Η") "Ή")
 (global-set-key (kbd "<dead-acute> ι") "ί")
+(global-set-key (kbd "<dead-acute> Ι") "Ί")
 (global-set-key (kbd "<dead-acute> ε") "έ")
-
+(global-set-key (kbd "<dead-acute> Ε") "Έ")
+;; maybe in the future https://github.com/lislon/emacs-switch-lang
 
 (nyan-mode 1)
 
 ;; org-mode customization
-
 (require 'org)
 
 (setcar (nthcdr 4 org-emphasis-regexp-components) 10)
-;;(setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")
+;; (setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")
+
+;; https://emacs.stackexchange.com/questions/22286/shiftarrow-to-change-window-does-not-work-in-org-mode
+(setq org-support-shift-select 'always)
+
+;; https://www.emacswiki.org/emacs/GlobalTextScaleMode
+;; TODO: find sth like this (setq text-scale-mode 2)
 
 ;; this setting should be placed last
 (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
