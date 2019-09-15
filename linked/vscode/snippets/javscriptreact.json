@@ -1,0 +1,22 @@
+{
+  "Print to console": {
+    "prefix": "_log",
+    "body": [
+      "console.log('$0');",
+    ],
+    "description": "Log output to console"
+  },
+  "Print pretty json": {
+    "prefix": "_jsp",
+    "body": [
+      "console.log(JSON.stringify($0, null, 2));"
+    ]
+  },
+  "debugger": {
+    "prefix": "_db",
+    "body": [
+      "debugger;",
+      "$0"
+    ]
+  },
+}

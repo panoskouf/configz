@@ -23,10 +23,10 @@
   "editor.stablePeek": true,
   "editor.wordWrap": "on",
   "explorer.openEditors.visible": 0,
-  "workbench.iconTheme": "material-icon-theme",
+  // "workbench.iconTheme": "material-icon-theme",
   "window.enableMenuBarMnemonics": false,
   "editor.minimap.enabled": false,
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "eslint.options": {
     "configFile": ".eslintrc.json"
   },
@@ -34,7 +34,7 @@
     "editorWarning.foreground": "#ff0",
     "editorInfo.foreground": "#00f"
   },
-  "workbench.colorTheme": "Atom One Light",
+  // "workbench.colorTheme": "Atom One Light",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -73,7 +73,8 @@
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
   "typescript.preferences.quoteStyle": "single",
-  "javascript.preferences.quoteStyle": "single"
+  "javascript.preferences.quoteStyle": "single",
+  "workbench.colorTheme": "Monokai Dimmed",
 }
 // plugins: Awesome Emacs Keymap, Color Highlight, Eslint, Prettier, Quokka.js, Bracket Pair Colorizer 2, Better Comments
 // themes: Primal, Primer Light, Atom One Dark Theme, Atom One Light
