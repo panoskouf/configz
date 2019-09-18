@@ -32,22 +32,19 @@ end
 alias e='emacs';
 alias sue='sudo emacs';
 
+alias config-nginx='sue /etc/nginx/nginx.conf'
+
 alias h='htop';
 alias suh='sudo htop';
-alias l='ls -a --color=auto -I \'.\' -I \'..\' ';
-alias ll='ls -lah --color=auto -I \'.\' -I \'..\' ';
 
-alias drives='df -h';
-alias usage='du -h -d1'
-
-# dev specific
 alias c='code .'
 alias d='env BROWSER=none npm run dev'
 alias chrome-no-cors='cd ~/scratch; and nohup google-chrome --disable-web-security --user-data-dir=~/scratch > /dev/null 2>&1 &; prevd'
 alias _~='sudo apt update'
 alias _~~='sudo apt upgrade'
 alias _~l='sudo apt list --upgradable'
-alias hs='emacs -nw /etc/hosts'
+alias hs='emacs26 -nw /etc/hosts'
+alias suhs='sudo emacs26 -nw /etc/hosts'
 alias vwh='cd /var/www/html/';
 alias lan-ip="hostname -I | cut -d' ' -f1"
 alias ex='exit';
@@ -60,6 +57,17 @@ alias tr='tree -c -L 1 --sort=name'
 alias tr2='tree -c -L 2 --sort=name'
 alias tr3='tree -c -L 3 --sort=name'
 alias trx='tree -c --sort=name -L '
+
+alias l='ls -a --color=auto -I \'.\' -I \'..\' ';
+alias ll='ls -lah --color=auto -I \'.\' -I \'..\' ';
+
+alias drives='df -h';
+alias usage='du -h -d1'
+
+# scripts
+alias lang='/usr/local/scripts/runOnBoot.sh';
+alias λανγ='/usr/local/scripts/runOnBoot.sh';
+
 
 # git
 function g --wraps git

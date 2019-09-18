@@ -26,7 +26,7 @@
   // "workbench.iconTheme": "material-icon-theme",
   "window.enableMenuBarMnemonics": false,
   "editor.minimap.enabled": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -1,
   "eslint.options": {
     "configFile": ".eslintrc.json"
   },
@@ -58,8 +58,8 @@
   "extensions.ignoreRecommendations": false,
   "editor.formatOnSave": true,
   "prettier.disableLanguages": [
-    "javascript",
-    "javascriptreact",
+    // "javascript",
+    // "javascriptreact",
     "css",
     "postcss",
     "less",
@@ -74,8 +74,29 @@
   "prettier.jsxSingleQuote": true,
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Atom One Light",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.requireConfig": true,
 }
-// plugins: Awesome Emacs Keymap, Color Highlight, Eslint, Prettier, Quokka.js, Bracket Pair Colorizer 2, Better Comments
-// themes: Primal, Primer Light, Atom One Dark Theme, Atom One Light
-// Material Icon Theme,  VSCode Great Icons
+/* plugins: {
+    Awesome Emacs Keymap,
+    Code Spell Checker,
+    Eslint,
+    Prettier,
+    Bracket Pair Colorizer 2,
+    Better Comments
+    Quokka.js, ?
+    Color Highlight, ?
+  },
+  themes: {
+    Primal,
+    Primer Light,
+    Atom One Dark Theme,
+    Atom One Light
+  },
+  iconThemes: {
+    Material Icon Theme,
+    VSCode Great Icons
+  }
+
+ */
