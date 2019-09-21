@@ -1,7 +1,11 @@
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# LINK EMACS, FISH & BASH
-echo '(load-file "'$THISDIR/linked/init.el'")' > ~/.emacs.d/init.el
+# LINK EMACS #todo maybe use printf
+# (setq emacsdir "/home/panoskouf/projects/configz/linked/")
+echo '' > ~/.emacs.d/init.el
+echo '(setq emacsdir  "'$THISDIR/linked/emacs/'")' >> ~/.emacs.d/init.el
+echo '(load-file "'$THISDIR/linked/emacs/init.el'")' >> ~/.emacs.d/init.el
+# LINK FISH & BASH
 echo 'source '$THISDIR/linked/fish/init.fish > ~/.config/omf/init.fish
 echo 'source '$THISDIR/linked/.bashrc > ~/.bashrc
 # LINK VSCODE CONFIGS
