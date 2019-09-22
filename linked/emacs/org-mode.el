@@ -20,6 +20,11 @@
       (when (eq state 'children)
         (setq org-cycle-subtree-status 'subtree))))
 
+;; search lazy text instead of headlines for links like file:somefile.org::some words
+(setq org-link-search-must-match-exact-headline nil)
+
+
+;; TODO: https://emacs.stackexchange.com/questions/5889/how-to-highlight-text-permanently-in-org-mode
 
 ;; this setting should be placed last
 (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)

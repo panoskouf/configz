@@ -25,5 +25,6 @@
 (load-file (concat emacsdir "org-agenda.el"))
 (load-file (concat emacsdir "org-crypt.el"))
 (load-file (concat emacsdir "org-mode.el"))
+(load-file (concat emacsdir "org-journal.el"))
 
 (nyan-mode 1)
