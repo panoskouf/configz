@@ -119,5 +119,9 @@
 ;; https://www.emacswiki.org/emacs/GlobalTextScaleMode
 ;; TODO: find sth like this (setq text-scale-mode 2)
 
+;; https://emacs.stackexchange.com/questions/47632/how-do-i-make-markdown-or-org-mode-hide-formatting-characters-until-i-edit
+(setq org-hide-emphasis-markers t)
+(setq markdown-hide-markup t)
+
 ;; this setting should be placed last
 (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
