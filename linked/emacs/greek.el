@@ -1,7 +1,6 @@
 ;; needs more work..
 
 (setq default-input-method "greek")
-(setq ring-bell-function 'ignore)
 
 ;; https://emacs.stackexchange.com/questions/2568/problem-dead-acute-is-undefined-appearing-when-typing-greek-stress
 (global-set-key (kbd "<dead-acute> α") "ά")

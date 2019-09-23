@@ -1,7 +1,3 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
 (package-initialize)
 
 (when (>= emacs-major-version 24)
@@ -18,7 +14,7 @@
 ;; --------------------------------------
 ;;
 
-
+;; emacsdir is this direcory path and is set from ../../init.sh
 (load-file (concat emacsdir "basic-config.el"))
 (load-file (concat emacsdir "utf8.el"))
 (load-file (concat emacsdir "greek.el"))
