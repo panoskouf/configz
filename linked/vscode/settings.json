@@ -26,7 +26,7 @@
   // "workbench.iconTheme": "material-icon-theme",
   "window.enableMenuBarMnemonics": false,
   "editor.minimap.enabled": false,
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "eslint.options": {
     "configFile": ".eslintrc.json"
   },
