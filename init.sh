@@ -1,7 +1,8 @@
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+# $THISDIR is the path relative to system's root folder, this  way all configs will work no matter where the dotfiles repo is cloned
+
 
 # LINK EMACS #todo maybe use printf
-# (setq emacsdir "/home/panoskouf/projects/configz/linked/")
 echo '' > ~/.emacs.d/init.el
 echo '(setq emacsdir  "'$THISDIR/linked/emacs/'")' >> ~/.emacs.d/init.el
 echo '(load-file "'$THISDIR/linked/emacs/init.el'")' >> ~/.emacs.d/init.el

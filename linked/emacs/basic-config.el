@@ -6,6 +6,9 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
+;;sounds
+(setq ring-bell-function 'ignore)
+
 ;; set font for linux
 (set-frame-font "Liberation Mono 14" nil t)
 
@@ -13,12 +16,12 @@
 (setq backup-directory-alist `(("." . "~/.backup/emacs")))
 (setq backup-by-copying t)
 
-;; {{ move between showing buffers easily
+;; move between showing buffers easily
 (global-set-key (kbd "C-x <up>") 'windmove-up)
 (global-set-key (kbd "C-x <down>") 'windmove-down)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
-;; }}
+
 
 ;; aliases
 (defalias 'yes-or-no-p 'y-or-n-p) ; y or n is enough
@@ -32,7 +35,7 @@
 (global-set-key (kbd "C-=") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
-;; tabs instead of spaces
+;; spaces instead of tabs
 (setq tab-width 2)
 (setq indent-tabs-mode nil)
 
