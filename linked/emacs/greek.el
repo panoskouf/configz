@@ -19,3 +19,9 @@
 (global-set-key (kbd "<dead-acute> ε") "έ")
 (global-set-key (kbd "<dead-acute> Ε") "Έ")
 ;; maybe in the future https://github.com/lislon/emacs-switch-lang
+;;
+
+
+;; make control meta keybindings work
+(require 'reverse-im)
+(reverse-im-activate "greek")
