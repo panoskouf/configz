@@ -7,8 +7,8 @@
 (setq org-support-shift-select t
       org-replace-disputed-keys t)
 
-;; https://www.emacswiki.org/emacs/GlobalTextScaleMode
-;; TODO: find sth like this (setq text-scale-mode 2)
+;; follow links with ret
+(setq org-return-follows-link t)
 
 ;; https://emacs.stackexchange.com/questions/47632/how-do-i-make-markdown-or-org-mode-hide-formatting-characters-until-i-edit
 (setq org-hide-emphasis-markers t)
@@ -20,7 +20,7 @@
       (when (eq state 'children)
         (setq org-cycle-subtree-status 'subtree))))
 
-;; search lazy text instead of headlines for links like file:somefile.org::some words
+;; search text instead of headlines for links like file:somefile.org::some words
 (setq org-link-search-must-match-exact-headline nil)
 
 
@@ -28,3 +28,6 @@
 
 ;; this setting should be placed last
 (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
+
+
+;; todo enter links with enter

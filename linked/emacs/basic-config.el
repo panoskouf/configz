@@ -26,6 +26,7 @@
 ;; aliases
 (defalias 'yes-or-no-p 'y-or-n-p) ; y or n is enough
 (defalias 'rs 'replace-string)
+(defalias 'rr 'replace-regexp)
 
 ;; buffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -51,3 +52,8 @@
   ( face tabs tab-mark)))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; todo add function to cycle through .org/(only?) files in this folder
+
+;; https://www.emacswiki.org/emacs/GlobalTextScaleMode
+;; todo find sth like this (setq text-scale-mode 2)
