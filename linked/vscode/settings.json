@@ -74,7 +74,7 @@
   "prettier.jsxSingleQuote": true,
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
-  "workbench.colorTheme": "Atom One Light",
+  "workbench.colorTheme": "Primal",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.requireConfig": true,
 }
@@ -84,7 +84,8 @@
     Eslint,
     Prettier,
     Bracket Pair Colorizer 2,
-    Better Comments
+    Better Comments,
+    Partial Diff,
     Quokka.js, ?
     Color Highlight, ?
   },

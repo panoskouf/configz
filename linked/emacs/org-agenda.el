@@ -1,4 +1,4 @@
-(setq org-agenda-files (list "~/documentation/journey/tmp.org" "~/documentation/journey/ops" "~/documentation/help/notes/agenda.org"))
+(setq org-agenda-files (list "~/Dropbox/documentation/journey/tmp.org" "~/Dropbox/documentation/journey/ops" "~/Dropbox/documentation/help/notes/agenda.org"))
 ;; https://lists.gnu.org/archive/html/emacs-orgmode/2009-09/msg00317.html
 ;; or better https://karl-voit.at/2017/02/11/my-system-is-foobar/
 (global-set-key (kbd "C-c A") 'org-agenda)
@@ -43,3 +43,7 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
                                                    (org-agenda-skip-if nil '(scheduled deadline))))
                     (org-agenda-overriding-header "ALL normal priority tasks:"))))
          ((org-agenda-compact-blocks t)))))
+
+;; todo config to see phases of the moon
+;; https://ftp.gnu.org/old-gnu/Manuals/emacs-20.7/html_node/emacs_388.html
+;; https://ftp.gnu.org/old-gnu/Manuals/emacs-20.7/html_node/emacs_401.html#SEC407

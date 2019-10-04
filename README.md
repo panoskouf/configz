@@ -12,7 +12,10 @@ if you are just checking this out, see summon.sh to get an idea of the original 
 - [elem os emacs fix](https://elementaryos.stackexchange.com/questions/797/how-to-get-gnu-emacs-work-on-elementary-os)
 - [emacs theme avk](https://github.com/avkoval/avk-emacs-themes)
 - [emacs keys in vscode](https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx)
-- gnome-tweaks -> Keyboard & Mouse -> Emacs input
+  - **packages**:
+    - nyan-mode
+    - markdown-mode
+    - org-journey
 
 #### chrome
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
@@ -21,4 +24,4 @@ if you are just checking this out, see summon.sh to get an idea of the original 
 - [Distraction Free YT](https://chrome.google.com/webstore/detail/df-tube-distraction-free/mjdepdfccjgcndkmemponafgioodelna)
 - [WhatFont](https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm)
 - [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
-- [Custom JS for websites](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija)
+- [uBlacklist](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?hl=en)
