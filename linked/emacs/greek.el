@@ -17,8 +17,15 @@
 (global-set-key (kbd "<dead-acute> Ι") "Ί")
 (global-set-key (kbd "<dead-acute> ε") "έ")
 (global-set-key (kbd "<dead-acute> Ε") "Έ")
+
+(global-set-key (kbd "<S-dead-diaeresis> ι") "ϊ")
+(global-set-key (kbd "<S-dead-diaeresis> <dead-acute> ι") "ΐ")
+(global-set-key (kbd "<S-dead-diaeresis> Ι") "Ϊ")
+(global-set-key (kbd "<S-dead-diaeresis> υ") "ϋ")
+(global-set-key (kbd "<S-dead-diaeresis> <dead-acute> υ") "ΰ")
+(global-set-key (kbd "<S-dead-diaeresis> Υ") "Ϋ")
+
 ;; maybe in the future https://github.com/lislon/emacs-switch-lang
-;;
 
 
 ;; make control meta keybindings work
