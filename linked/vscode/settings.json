@@ -3,7 +3,7 @@
   "git.ignoreMissingGitWarning": true,
   "editor.fontSize": 20,
   "editor.cursorStyle": "block",
-  "editor.fontWeight": "600",
+  // "editor.fontWeight": "600",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
@@ -74,7 +74,7 @@
   "prettier.jsxSingleQuote": true,
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
-  "workbench.colorTheme": "Primal",
+  "workbench.colorTheme": "βui - Tomorrow Light",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.requireConfig": true,
 }

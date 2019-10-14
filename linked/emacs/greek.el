@@ -1,8 +1,5 @@
-;; needs more work..
-
 (setq default-input-method "greek")
 
-;; https://emacs.stackexchange.com/questions/2568/problem-dead-acute-is-undefined-appearing-when-typing-greek-stress
 (global-set-key (kbd "<dead-acute> α") "ά")
 (global-set-key (kbd "<dead-acute> Α") "Ά")
 (global-set-key (kbd "<dead-acute> ο") "ό")
@@ -25,9 +22,8 @@
 (global-set-key (kbd "<S-dead-diaeresis> <dead-acute> υ") "ΰ")
 (global-set-key (kbd "<S-dead-diaeresis> Υ") "Ϋ")
 
-;; maybe in the future https://github.com/lislon/emacs-switch-lang
-
-
 ;; make control meta keybindings work
 (require 'reverse-im)
 (reverse-im-activate "greek")
+
+;; maybe in the future https://github.com/lislon/emacs-switch-lang

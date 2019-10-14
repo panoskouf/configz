@@ -10,7 +10,7 @@
 (setq ring-bell-function 'ignore)
 
 ;; set font for linux
-(set-frame-font "Liberation Mono 14" nil t)
+
 
 ;; backup config for emacs files
 (setq backup-directory-alist `(("." . "~/.backup/emacs")))
@@ -27,6 +27,9 @@
 (defalias 'yes-or-no-p 'y-or-n-p) ; y or n is enough
 (defalias 'rs 'replace-string)
 (defalias 'rr 'replace-regexp)
+(defalias 'ct 'customize-themes)
+(defalias '_l 'light-mode)
+(defalias '_d 'dark-mode)
 
 ;; buffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
