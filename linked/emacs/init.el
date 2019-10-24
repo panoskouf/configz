@@ -16,6 +16,7 @@
 
 ;; emacsdir is this direcory path and is set from ../../init.sh
 (load-file (concat emacsdir "basic-config.el"))
+(load-file (concat emacsdir "themes.el"))
 (load-file (concat emacsdir "utf8.el"))
 (load-file (concat emacsdir "greek.el"))
 (load-file (concat emacsdir "org-agenda.el"))

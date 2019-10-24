@@ -1,4 +1,12 @@
+;; bind org-bullets to org-mode
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 (require 'org)
+
+;; show only one bullet
+(setq org-startup-indented t)
+
 
 (setcar (nthcdr 4 org-emphasis-regexp-components) 10)
 ;; (setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")

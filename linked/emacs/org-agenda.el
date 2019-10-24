@@ -43,3 +43,7 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
                                                    (org-agenda-skip-if nil '(scheduled deadline))))
                     (org-agenda-overriding-header "ALL normal priority tasks:"))))
          ((org-agenda-compact-blocks t)))))
+
+;; todo config to see phases of the moon
+;; https://ftp.gnu.org/old-gnu/Manuals/emacs-20.7/html_node/emacs_388.html
+;; https://ftp.gnu.org/old-gnu/Manuals/emacs-20.7/html_node/emacs_401.html#SEC407
