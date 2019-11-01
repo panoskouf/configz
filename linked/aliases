@@ -2,11 +2,19 @@
 
 # --------------------------- commands -------------------------------------
 # alias sc="sudo /etc/init.d/screen-cleanup start && screen -S name"
-alias emacs="XLIB_SKIP_ARGB_VISUALS=1 emacs"
+alias emacs="XLIB_SKIP_ARGB_VISUALS=1 emacs26"
+alias e="XLIB_SKIP_ARGB_VISUALS=1 emacs26"
 alias emx="emacs -nw "
 alias upd="sudo apt-fast update"
 alias upg="sudo apt-fast upgrade"
 alias py3="python3"
+
+# https://askubuntu.com/questions/235866/set-emacs-nw-as-default-editor
+export EDITOR="emacs26 -nw"
+export VISUAL="env XLIB_SKIP_ARGB_VISUALS=1 emacs26"
+
+# some vars live here for now
+export SCRIPTS="/usr/local/scripts/"
 
 # --------------------------- gpg -------------------------------------
 . ~/sh_vars

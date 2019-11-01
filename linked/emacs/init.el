@@ -23,5 +23,6 @@
 (load-file (concat emacsdir "org-crypt.el"))
 (load-file (concat emacsdir "org-mode.el"))
 (load-file (concat emacsdir "org-journal.el"))
+(load-file (concat emacsdir "python.el"))
 
 (nyan-mode 1)

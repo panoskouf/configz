@@ -1,6 +1,8 @@
 ;; todo make font a var and add functions to change it
 ;; add func to change to mono fast
 
+(set-fontset-font t nil "Symbola" nil 'prepend)
+
 (defun base-theme-mode ()
   "Inherit me."
   (interactive)

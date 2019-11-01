@@ -1,4 +1,4 @@
-(setq org-agenda-files (list "~/Dropbox/documentation/journey/tmp.org" "~/Dropbox/documentation/journey/ops" "~/Dropbox/documentation/help/notes/agenda.org"))
+(setq org-agenda-files (list "~/Dropbox/documentation/tmp.org" "~/Dropbox/documentation/ops" "~/Dropbox/documentation/help/notes/agenda.org"))
 ;; https://lists.gnu.org/archive/html/emacs-orgmode/2009-09/msg00317.html
 ;; or better https://karl-voit.at/2017/02/11/my-system-is-foobar/
 (global-set-key (kbd "C-c A") 'org-agenda)

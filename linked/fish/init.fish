@@ -12,6 +12,7 @@ set fish_greeting ''
 
 set DIR (dirname (readlink -m (status --current-filename)))
 
+# todo move fish_vars to gitignored and add it to source control
 test -f $DIR/fish_vars
   and source $DIR/fish_vars
   or echo 'could not find file' $DIR/fish_vars
@@ -31,6 +32,22 @@ function emacs --wraps emacs26
 end
 alias e='emacs';
 alias sue='sudo emacs';
+set -Ux EDITOR 'emacs26 -nw'
+set -Ux VISUAL 'env XLIB_SKIP_ARGB_VISUALS=1 emacs26'
+
+# sudo sh -c "todo"
+
+
+set -Ux SCRIPTS '/usr/local/scripts/'
+function n_sh
+    if test -e $SCRIPTS$argv[1].sh
+	echo filename $argv[1].sh  already exist
+	return
+    end
+    echo '#!/bin/bash' > $SCRIPTS$argv[1].sh
+    chmod 755 $SCRIPTS$argv[1].sh
+    e $SCRIPTS$argv[1].sh
+end
 
 alias config-nginx='sue /etc/nginx/nginx.conf'
 
@@ -48,6 +65,8 @@ alias suhs='sudo emacs26 -nw /etc/hosts'
 alias vwh='cd /var/www/html/';
 alias lan-ip="hostname -I | cut -d' ' -f1"
 alias ex='exit';
+alias lg='ls -la | grep ';
+alias py3='python3';
 
 # other
 alias nomnom='rm -rf '
@@ -69,7 +88,7 @@ alias lang='/usr/local/scripts/runOnBoot.sh';
 alias λανγ='/usr/local/scripts/runOnBoot.sh';
 
 
-# git
+# git --todo: checkout https://gist.github.com/james2doyle/6e8a120e31dbaa806a2f91478507314c
 function g --wraps git
     git $argv;
 end
