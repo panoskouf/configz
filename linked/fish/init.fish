@@ -118,6 +118,21 @@ alias gco='g checkout'
 alias gm='g merge'
 alias gr='g reset'
 
+# delete unpushed commits # check git rebase --onto https://stackoverflow.com/questions/3197413/how-do-i-delete-unpushed-git-commits
+
+# reset rewrites history, use it only for local not-pushed commits
+# Delete the most recent commit, keeping the work you\'ve done'
+alias gfs='git reset --soft HEAD~1'
+# Delete the most recent commit, destroying the work you\'ve done
+alias gfh='git reset --hard HEAD~1'
+# revert does not rewrite history
+# g revert HEAD~5 # this will revert just the 5th commit from the end
+# g revert HEAD~5..HEAD # this will revert the last 5 commits
+
+# more -> https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
+
+# https://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repository-was-originally-cloned-fr
+
 #switch (uname)
 #   case Darwin
 #       # mac only config
