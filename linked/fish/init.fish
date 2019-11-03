@@ -37,17 +37,32 @@ set -Ux VISUAL 'env XLIB_SKIP_ARGB_VISUALS=1 emacs26'
 
 # sudo sh -c "todo"
 
-
 set -Ux SCRIPTS '/usr/local/scripts/'
-function n_sh
-    if test -e $SCRIPTS$argv[1].sh
-	echo filename $argv[1].sh  already exist
+
+function new_script
+    set filename $argv[1]
+    set ext $argv[2]
+    if test -e $SCRIPTS$filename.$ext
+	echo filename $filename.$ext  already exist
 	return
     end
-    echo '#!/bin/bash' > $SCRIPTS$argv[1].sh
-    chmod 755 $SCRIPTS$argv[1].sh
-    e $SCRIPTS$argv[1].sh
+    if [ $ext = 'sh' ]
+	echo '#!/bin/bash' > $SCRIPTS$filename.$ext
+    else if [ $ext = 'fish' ]
+	echo '#!/usr/bin/env fish' > $SCRIPTS$filename.$ext
+    end
+    chmod 755 $SCRIPTS$filename.$ext
+    e $SCRIPTS$filename.$ext
 end
+
+function n_fish
+    new_script $argv[1] 'fish'
+end
+
+function n_sh
+    new_script $argv[1] 'sh'
+end
+
 
 alias config-nginx='sue /etc/nginx/nginx.conf'
 

@@ -9,6 +9,24 @@
 ;;sounds
 (setq ring-bell-function 'ignore)
 
+;; start from different file todo
+;;(let ((filename "~/test.txt"))
+  ;;(when (file-exists-p filename)
+    ;;(setq initial-buffer-choice filename)))
+
+;; initial window size
+(setq initial-frame-alist
+      '(
+        (width . 60) ; character
+        (height . 25) ; lines
+        ))
+
+;; default/sebsequent window size
+(setq default-frame-alist
+      '(
+        (width . 60) ; character
+        (height . 25) ; lines
+        ))
 
 ;; backup config for emacs files
 (setq backup-directory-alist `(("." . "~/.backup/emacs")))
