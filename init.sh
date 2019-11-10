@@ -32,3 +32,6 @@ ln cupertino_effect_black/dock.theme ~/$plankdir/cupertino_effect_black/dock.the
 ln frost/dock.theme ~/$plankdir/frost/dock.theme
 ln glassier/dock.theme ~/$plankdir/glassier/dock.theme
 ln mitis/dock.theme ~/$plankdir/mitis/dock.theme
+# LINK .XCompose
+cd $THISDIR/linked
+ln .XCompose ~/.XCompose
