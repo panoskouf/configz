@@ -6,16 +6,18 @@
 ;; default fonts will override mixed-pitch, dont use them
 ;; (set-default-font "Raleway 16" nil t)
 
+;; todo create 2nd category of themes to adjust text for low dpi screens
+
 (require 'mixed-pitch)
 ;; use monospace where you should (e.g. org tables, dired)
 (add-hook 'text-mode-hook 'mixed-pitch-mode)
-(set-face-attribute 'fixed-pitch-serif nil :family  "Fira Code 16")
-(set-face-font 'fixed-pitch-serif "Fira Code 16")
-(set-face-font 'variable-pitch "Raleway 16")
+(set-face-attribute 'fixed-pitch-serif nil :family  "Fira Code 14")
+(set-face-font 'fixed-pitch-serif "Fira Code 14")
+(set-face-font 'variable-pitch "Raleway 14")
 
 ;; Fix font size of monospace font
 (set-face-attribute 'default nil
-                    :height 170
+                    :height 120
                     :weight 'normal
                     :width 'normal
 		    )

@@ -6,6 +6,7 @@
 ;;   flycheck
 ;;   blacken
 
+(elpy-version)
 (elpy-enable)
 
 ;; Enable Flycheck for real time syntax feedback

@@ -38,7 +38,6 @@
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 
-
 ;; aliases
 (defalias 'yes-or-no-p 'y-or-n-p) ; y or n is enough
 (defalias 'rs 'replace-string)
@@ -51,6 +50,12 @@
 ;; buffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
+
+;; sort and show only filenames in dired
+(add-hook 'dired-mode-hook
+      (lambda ()
+        (dired-hide-details-mode)
+        (dired-sort-toggle-or-edit)))
 
 ;; increase/decrease font size
 (global-set-key (kbd "C-=") 'text-scale-increase)
