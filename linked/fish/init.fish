@@ -103,13 +103,16 @@ alias lang='/usr/local/scripts/runOnBoot.sh';
 alias λανγ='/usr/local/scripts/runOnBoot.sh';
 
 
+# todo https://stackoverflow.com/questions/10312521/how-to-fetch-all-git-branches
 # git --todo: checkout https://gist.github.com/james2doyle/6e8a120e31dbaa806a2f91478507314c
 function g --wraps git
     git $argv;
 end
 alias g.='g add .'
 alias gb='g branch'
-alias gnb='g checkout -b'
+alias gnb='g checkout -b '
+alias grb='g branch -d '
+alias grfb='g branch -D '
 alias gcm='g commit -m'
 alias ghcm='g commit --no-verify -m '
 alias gl="g log --graph --oneline --pretty=format:'%C(reset) %C(#4a7aff)%h %C(magenta)-%C(#637a82)%d %s %C(#db9ad2)(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative"
@@ -128,8 +131,11 @@ alias g~~='g diff --staged'
 alias ga='g add'
 alias gap='g add -p'
 alias gc='g commit'
+# amend only for local commit
+alias gca='g commit --amend'
 alias gcl='g clone'
 alias gco='g checkout'
+alias master='gco master'
 alias gm='g merge'
 alias gr='g reset'
 
