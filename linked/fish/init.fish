@@ -65,6 +65,8 @@ end
 
 
 alias config-nginx='sue /etc/nginx/nginx.conf'
+alias logs-cron='tail -f /var/log/syslog'
+
 
 alias h='htop';
 alias suh='sudo htop';
@@ -216,3 +218,7 @@ alias gfh='git reset --hard HEAD~1'
 
 # multiple smooth osd_cat
 # https://gist.github.com/netzverweigerer/696b71c45e1adf1097ec
+
+# notify-send " " -h string:synchronous:volume -h int:value:50 -h string:x-canonical-private-synchronous:script
+
+# [[https://elementaryos.stackexchange.com/questions/14276/notify-send-icon-custom-png][notifications - notify-send icon: custom png - elementary OS Stack Exchange]]

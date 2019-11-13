@@ -74,7 +74,7 @@
   "prettier.jsxSingleQuote": true,
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
-  "workbench.colorTheme": "βui - Tomorrow Dark",
+  "workbench.colorTheme": "βui - Eighties Dark",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.requireConfig": true,
 }
