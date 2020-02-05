@@ -123,9 +123,11 @@ alias gma='g merge --abort'
 alias gu='g push'
 alias gd='g pull'
 alias gdr='g pull --rebase'
+alias gdru='g pull --rebase --autostash'
 alias gdnr='g pull --no-rebase'
 alias gs='g status -sb'
 alias gsp='g stash pop'
+alias gsm='g stash save '
 # https://github.com/so-fancy/diff-so-fancy
 alias g~='g diff'
 alias g~~='g diff --staged'
@@ -140,6 +142,7 @@ alias gco='g checkout'
 alias master='gco master'
 alias gm='g merge'
 alias gr='g reset'
+# undo a specific old commit: just do:  g revert <commit hash>
 
 # delete unpushed commits # check git rebase --onto https://stackoverflow.com/questions/3197413/how-do-i-delete-unpushed-git-commits
 

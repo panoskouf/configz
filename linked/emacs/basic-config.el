@@ -55,7 +55,8 @@
 (add-hook 'dired-mode-hook
       (lambda ()
         (dired-hide-details-mode)
-        (dired-sort-toggle-or-edit)))
+        ;; (dired-sort-toggle-or-edit)
+       ))
 
 ;; increase/decrease font size
 (global-set-key (kbd "C-=") 'text-scale-increase)
