@@ -1,3 +1,14 @@
+(electric-pair-mode 1)
+
+(defvar org-electric-pairs '((?\* . ?\*) (?/ . ?/) (?= . ?=)
+                             (?\_ . ?\_) (?~ . ?~) (?+ . ?+)) "Electric pairs for org-mode.")
+
+(defun org-add-electric-pairs ()
+  (setq-local electric-pair-pairs (append electric-pair-pairs org-electric-pairs))
+  (setq-local electric-pair-text-pairs electric-pair-pairs))
+
+(add-hook 'org-mode-hook 'org-add-electric-pairs)
+
 ;; bind org-bullets to org-mode
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
