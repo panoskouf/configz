@@ -35,3 +35,7 @@ ln mitis/dock.theme ~/$plankdir/mitis/dock.theme
 # LINK .XCompose
 cd $THISDIR/linked
 ln .XCompose ~/.XCompose
+# LINK SCRIPTS
+# scripts must have owner the user and have execute permission
+cd $THISDIR/scripts
+cp * /usr/local/scripts/
