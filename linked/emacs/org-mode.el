@@ -7,6 +7,7 @@
   (setq-local electric-pair-pairs (append electric-pair-pairs org-electric-pairs))
   (setq-local electric-pair-text-pairs electric-pair-pairs))
 
+
 (defun electric-single-char ()
   "Add a way to add just a single char"
   (interactive)
@@ -15,7 +16,12 @@
   (global-set-key (kbd "M-=") (lambda () (interactive) (insert ?=)))
   (global-set-key (kbd "M-_") (lambda () (interactive) (insert ?\_)))
   (global-set-key (kbd "M-+") (lambda () (interactive) (insert ?+)))
-)
+  (setq electric-pair-inhibit-predicate
+	(lambda (c)
+	  (cond (char-equal c ?\{) (electric-pair-default-inhibit c)
+		(char-equal c ?\[) (electric-pair-default-inhibit c))
+	  ))
+  )
 
 (add-hook 'org-mode-hook 'org-add-electric-pairs)
 (add-hook 'org-mode-hook 'electric-single-char)
