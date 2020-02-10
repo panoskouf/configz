@@ -42,6 +42,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p) ; y or n is enough
 (defalias 'rs 'replace-string)
 (defalias 'rr 'replace-regexp)
+(defalias 'rb 'revert-buffer)
 (defalias 'ct 'customize-themes)
 (defalias 'atf 'append-to-file)
 (defalias '_l 'light-mode)
