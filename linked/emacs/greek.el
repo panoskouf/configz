@@ -26,4 +26,8 @@
 (require 'reverse-im)
 (reverse-im-activate "greek")
 
-;; maybe in the future https://github.com/lislon/emacs-switch-lang
+;; semicolon in greek is in q button - normalize this
+;; for now just eat comment-dwim - remember to rebind this
+(add-hook 'org-mode-hook
+          (lambda ()
+                  (local-set-key (kbd "M-;") 'org-fill-paragraph)))
