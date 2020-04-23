@@ -12,6 +12,9 @@ set fish_greeting ''
 
 set DIR (dirname (readlink -m (status --current-filename)))
 
+mkdir -p /usr/local/scripts
+set -gx PATH /usr/local/scripts $PATH
+
 # todo move fish_vars to gitignored and add it to source control
 test -f $DIR/fish_vars
   and source $DIR/fish_vars
@@ -63,10 +66,13 @@ function n_sh
     new_script $argv[1] 'sh'
 end
 
+alias ram='free -h'
+# create a ram partition
+alias ram4g='sudo mkdir -p /mnt/ram; and sudo mount -t tmpfs tmpfs /mnt/ram -o size=4096M'
+
 
 alias config-nginx='sue /etc/nginx/nginx.conf'
 alias logs-cron='tail -f /var/log/syslog'
-
 
 alias h='htop';
 alias suh='sudo htop';
@@ -111,7 +117,7 @@ function g --wraps git
     git $argv;
 end
 alias g.='g add .'
-alias gb='g branch'
+alias gb='git branch -vv'
 alias gnb='g checkout -b '
 alias grb='g branch -d '
 alias grfb='g branch -D '

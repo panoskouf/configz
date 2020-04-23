@@ -9,12 +9,8 @@
    t))
 
 
-;;
-;; GG
-;; --------------------------------------
-;;
-
-;; emacsdir is this direcory path and is set from ../../init.sh
+;; emacsdir is this direcory path and is set from configs dir
+;; (init.sh)
 (load-file (concat emacsdir "basic-config.el"))
 (load-file (concat emacsdir "themes.el"))
 (load-file (concat emacsdir "utf8.el"))

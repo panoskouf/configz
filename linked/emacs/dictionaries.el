@@ -5,6 +5,12 @@
 ;; test in terminal with <hunspell -d el_GR> and then mistype a greek word
 ;; add configuration
 
+;; flyspell-lazy
+
+;; improve performance when using flyspell
+(require 'flyspell-lazy)
+(flyspell-lazy-mode 1)
+
 (require 'ispell)
 ;; custom dictionary names do not work
 (add-to-list 'ispell-local-dictionary-alist '("el_GR"
@@ -40,3 +46,4 @@
 
 (global-set-key (kbd "C-c d") 'fd-switch-dictionary)
 (global-set-key (kbd "C-c i") 'ispell)
+(global-set-key (kbd "C-c f") 'flyspell-mode)
