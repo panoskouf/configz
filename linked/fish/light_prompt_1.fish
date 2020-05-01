@@ -9,6 +9,13 @@ set __fish_git_prompt_showstashstate true
 set __fish_git_prompt_showuntrackedfiles true
 
 
+# main prompt vars
+set fish_color_cwd cb4b16
+set fish_color_user 5f87ff
+set fish_color_host 5f87ff
+set __fish_git_prompt_color 586e78
+
+
 function fish_prompt --description 'Write out the prompt'
 
   set -l last_status $status
@@ -92,10 +99,3 @@ function fish_prompt --description 'Write out the prompt'
   echo -s "$__fish_prompt_user" "$USER" @ "$__fish_prompt_host" "$__fish_prompt_hostname" "$__fish_prompt_normal" ' ' "$__fish_prompt_cwd" (prompt_pwd)
   echo -s (__fish_git_prompt) "$__fish_prompt_normal" "$delim" ' '
 end
-
-
-# main prompt vars
-set fish_color_cwd cb4b16
-set fish_color_user 5f87ff
-set fish_color_host 5f87ff
-set __fish_git_prompt_color 586e78

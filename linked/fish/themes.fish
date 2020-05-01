@@ -42,8 +42,7 @@ function setGitLightColors
     git config --global color.diff.whitespace "#ff6161 reverse"
 end
 
-# set light theme
-function _l1
+function _lightThemeBase
     set DIR (dirname (readlink -m (status --current-filename)))
     # todo custom dircolors per theme # dircolors config in init.fish for now
     # for these one use the same but make it not bold
@@ -54,9 +53,6 @@ function _l1
     # custom prompt theme # do I need to rm first ?
     ln -sf $DIR/light_prompt_1.fish ~/.config/fish/functions/fish_prompt.fish
 
-    # change terminal background and light/dark variant
-    gsettings set io.elementary.terminal.settings background 'rgba(253, 246, 227, 0.95)'
-    gsettings set io.elementary.terminal.settings prefer-dark-style false
     # check io.elementary.terminal.settings in dconf-editor for more settings
 
     # todo: maybe also change plank
@@ -68,15 +64,69 @@ function _l1
     omr
 end
 
-# https://www.reddit.com/r/elementaryos/comments/cjn1x5/179_color_schemes_for_your_gtkbased_linux/
-
-# terminal dark theme
-function _d
-    # https://gist.github.com/denolfe/66a2827bd5fabedff447
-    # https://gist.github.com/davidgomes/5162998
-    echo 'not implemented yet'
+# solarized light theme
+function _l1
+    # change terminal background and light/dark variant
+    gsettings set io.elementary.terminal.settings background 'rgba(253, 246, 227, 0.95)'
+    gsettings set io.elementary.terminal.settings prefer-dark-style false
+    _lightThemeBase
 end
 
+# light white
+function _l2
+    # change terminal background and light/dark variant
+    gsettings set io.elementary.terminal.settings background 'rgba(255, 255, 255, 0.95)'
+    gsettings set io.elementary.terminal.settings prefer-dark-style false
+    _lightThemeBase
+end
+
+# light transparent white
+function _lt
+    # change terminal background and light/dark variant
+    gsettings set io.elementary.terminal.settings background 'rgba(255, 255, 255, 0.70)'
+    gsettings set io.elementary.terminal.settings prefer-dark-style false
+    _lightThemeBase
+end
+
+
+function setGitDarkColors
+    # use light git colors for now
+    setGitLightColors
+end
+
+function _darkThemeBase
+    set DIR (dirname (readlink -m (status --current-filename)))
+    # use the light ones for now..
+    source $DIR/light_vars_1.fish
+    ln -sf $DIR/light_prompt_1.fish ~/.config/fish/functions/fish_prompt.fish
+    setGitDarkColors
+    clear
+    omr
+end
+
+
+# light white
+function _d1
+    # change terminal background and light/dark variant
+    gsettings set io.elementary.terminal.settings background 'rgba(0, 0, 0, 0.95)'
+    gsettings set io.elementary.terminal.settings prefer-dark-style true
+    _darkThemeBase
+end
+
+# light transparent white
+function _dt
+    # change terminal background and light/dark variant
+    gsettings set io.elementary.terminal.settings background 'rgba(0, 0, 0, 0.70)'
+    gsettings set io.elementary.terminal.settings prefer-dark-style true
+    _darkThemeBase
+end
+
+
+# https://www.reddit.com/r/elementaryos/comments/cjn1x5/179_color_schemes_for_your_gtkbased_linux/
+# https://gist.github.com/denolfe/66a2827bd5fabedff447
+# https://gist.github.com/davidgomes/5162998
+
+# todo change these per theme
 if test -e $DIR/dircolors
     eval (dircolors -c $DIR/dircolors)
 end
