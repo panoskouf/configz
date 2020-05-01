@@ -8,6 +8,11 @@
 # light theme coffeeandcode
 # dark theme
 
+#todo create func for sudo sh -c 'command here'
+
+#sed -i '1,3d' file.txt
+#This deletes first 3 line from file.txt.
+
 set fish_greeting ''
 
 set DIR (dirname (readlink -m (status --current-filename)))
@@ -27,8 +32,6 @@ test -f $DIR/gitignored.fish
 source $DIR/git_utils.fish
 source $DIR/archive_utils.fish;
 source $DIR/themes.fish;
-
-alias sudo='sudo ';
 
 function emacs --wraps emacs26
     nohup env XLIB_SKIP_ARGB_VISUALS=1 emacs26 $argv[1] >/dev/null 2>&1 &
@@ -76,6 +79,7 @@ alias logs-cron='tail -f /var/log/syslog'
 
 alias h='htop';
 alias suh='sudo htop';
+alias hs='http-server -c-1';
 
 alias c='code .'
 alias d='env BROWSER=none npm run dev'
@@ -236,4 +240,4 @@ alias gfh='git reset --hard HEAD~1'
 
 # notify-send " " -h string:synchronous:volume -h int:value:50 -h string:x-canonical-private-synchronous:script
 
-# [[https://elementaryos.stackexchange.com/questions/14276/notify-send-icon-custom-png][notifications - notify-send icon: custom png - elementary OS Stack Exchange]]
+# [[https://elementaryos.stackexchange.com/questions/14276/notify-send-icon-custom-png][notifications - notify-send icon: custom png - elementary OS Stack
