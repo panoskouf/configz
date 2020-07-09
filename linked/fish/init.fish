@@ -125,11 +125,8 @@ alias gb='git branch -vv'
 alias gnb='g checkout -b '
 alias grb='g branch -d '
 alias grfb='g branch -D '
-alias gcm='g commit -m'
-alias ghcm='g commit --no-verify -m '
 alias gl="g log --graph --oneline --pretty=format:'%C(reset) %C(#4a7aff)%h %C(magenta)-%C(#637a82)%d %s %C(#db9ad2)(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gla='g log --graph --decorate --oneline --abbrev-commit --all'
-alias gma='g merge --abort'
 alias gu='g push'
 alias gd='g pull'
 alias gdr='g pull --rebase'
@@ -147,11 +144,19 @@ alias gap='g add -p'
 alias gc='g commit'
 # amend only for local commit
 alias gca='g commit --amend'
+alias gcm='g commit -m'
+alias ghcm='g commit --no-verify -m '
 alias gcl='g clone'
 alias gco='g checkout'
 alias master='gco master'
+alias gcp='g cherry-pick --no-edit'
+alias gcpa='g cherry-pick --abort'
 alias gm='g merge'
+alias gma='g merge --abort'
 alias gr='g reset'
+alias grv='g revert'
+alias grv='g revert --abort'
+
 # undo a specific old commit: just do:  g revert <commit hash>
 
 # delete unpushed commits # check git rebase --onto https://stackoverflow.com/questions/3197413/how-do-i-delete-unpushed-git-commits
