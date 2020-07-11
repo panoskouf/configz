@@ -9,6 +9,7 @@
    t))
 
 
+
 ;; emacsdir is this direcory path and is set from configs dir
 ;; (init.sh)
 (load-file (concat emacsdir "basic-config.el"))

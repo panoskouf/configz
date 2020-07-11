@@ -1,5 +1,8 @@
 (setq default-input-method "greek")
 
+;; https://emacs.stackexchange.com/questions/2568/problem-dead-acute-is-undefined-appearing-when-typing-greek-stress -- todo: fix dead-acute keybindings not working in commands, eg as a word containing a stress that is passed as param to the search function
+;; https://emacs.stackexchange.com/questions/1020/problems-with-keybindings-when-using-terminal/13957#13957
+
 (global-set-key (kbd "<dead-acute> α") "ά")
 (global-set-key (kbd "<dead-acute> Α") "Ά")
 (global-set-key (kbd "<dead-acute> ο") "ό")

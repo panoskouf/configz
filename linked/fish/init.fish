@@ -73,6 +73,8 @@ alias ram='free -h'
 # create a ram partition
 alias ram4g='sudo mkdir -p /mnt/ram; and sudo mount -t tmpfs tmpfs /mnt/ram -o size=4096M'
 
+# key should be in gdrive set directory
+alias cl='gdrive --service-account gdrive-sync-key.json'
 
 alias config-nginx='sue /etc/nginx/nginx.conf'
 alias logs-cron='tail -f /var/log/syslog'
