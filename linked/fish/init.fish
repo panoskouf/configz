@@ -83,6 +83,9 @@ alias h='htop';
 alias suh='sudo htop';
 alias hs='http-server -c-1';
 
+# find file
+alias ff='find ~/ -name '
+
 alias c='code .'
 alias d='env BROWSER=none npm run dev'
 alias chrome-no-cors='cd ~/scratch; and nohup google-chrome --disable-web-security --user-data-dir=~/scratch > /dev/null 2>&1 &; prevd'
