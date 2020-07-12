@@ -5,8 +5,7 @@
 # https://github.com/brigand/fish-functions/tree/master/functions
 # https://github.com/derekstavis/plugin-nvm
 
-# light theme coffeeandcode
-# dark theme
+# omf theme coffeeandcode
 
 #todo create func for sudo sh -c 'command here'
 
@@ -21,13 +20,13 @@ mkdir -p /usr/local/scripts
 set -gx PATH /usr/local/scripts $PATH
 
 # todo move fish_vars to gitignored and add it to source control
-test -f $DIR/fish_vars
-  and source $DIR/fish_vars
-  or echo 'could not find file' $DIR/fish_vars
+#test -f $DIR/fish_vars
+#  and source $DIR/fish_vars
+#  or echo 'could not find file' $DIR/fish_vars
 
-test -f $DIR/gitignored.fish
-  and source $DIR/gitignored.fish
-  or echo 'could not find file' $DIR/gitignored.fish
+#test -f $DIR/gitignored.fish
+#  and source $DIR/gitignored.fish
+#  or echo 'could not find file' $DIR/gitignored.fish
 
 source $DIR/git_utils.fish
 source $DIR/archive_utils.fish;
@@ -85,6 +84,9 @@ alias hs='http-server -c-1';
 
 # find file
 alias ff='find ~/ -name '
+# find document
+alias fd='find ~/Dropbox/documentation -name '
+# tree -f | grep filename
 
 alias c='code .'
 alias d='env BROWSER=none npm run dev'

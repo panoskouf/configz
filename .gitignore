@@ -1,3 +1,4 @@
 linked/fish/fish_vars
 linked/sh_vars
-/linked/fish/gitignored.fish
+linked/fish/gitignored.fish
+scripts

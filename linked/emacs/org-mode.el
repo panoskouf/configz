@@ -33,9 +33,9 @@
 (setq org-bullets-bullet-list
   '(;;; Large
     "✸"
-    "🌠"
+    "◉"
      "✿"
-    "🌟"
+    "☯"
      ;;      "◉"  "○" ♥ ● ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢ ❀ ◆ ◖ ▶
      ;;; Small
      ;; ► • ★ ▸
@@ -59,7 +59,6 @@
 
 ;; https://emacs.stackexchange.com/questions/47632/how-do-i-make-markdown-or-org-mode-hide-formatting-characters-until-i-edit
 (setq org-hide-emphasis-markers t)
-(setq markdown-hide-markup t)
 
 ;; fold by pressing tab once
 (add-hook 'org-cycle-hook
