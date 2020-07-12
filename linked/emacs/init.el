@@ -1,3 +1,4 @@
+;; packages:  nyan-mode
 (package-initialize)
 
 (when (>= emacs-major-version 24)
@@ -17,10 +18,10 @@
 (load-file (concat emacsdir "utf8.el"))
 (load-file (concat emacsdir "greek.el"))
 (load-file (concat emacsdir "org-agenda.el"))
-(load-file (concat emacsdir "org-crypt.el"))
+;; (load-file (concat emacsdir "org-crypt.el"))
 (load-file (concat emacsdir "org-mode.el"))
-(load-file (concat emacsdir "org-journal.el"))
-(load-file (concat emacsdir "python.el"))
+;; (load-file (concat emacsdir "org-journal.el"))
+;; (load-file (concat emacsdir "python.el"))
 (load-file (concat emacsdir "dictionaries.el"))
 
 (nyan-mode 1)

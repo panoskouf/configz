@@ -1,4 +1,5 @@
-;; packages:  mixed-pitch, org-bullets
+;; packages:  mixed-pitch, org-bullets, spacemacs-theme
+;; apt:  fonts-firacode
 
 ;; kinda show emoji, emacs27 has better support so look to fix it then
 (set-fontset-font t nil "Symbola" nil 'prepend)

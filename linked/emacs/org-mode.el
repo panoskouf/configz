@@ -1,4 +1,4 @@
-(electric-pair-mode 1)
+(electric-pair-mode 0)
 
 (defvar org-electric-pairs '((?\* . ?\*) (?/ . ?/) (?= . ?=)
                              (?\_ . ?\_) (?~ . ?~) (?+ . ?+)) "Electric pairs for org-mode.")

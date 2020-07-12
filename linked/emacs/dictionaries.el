@@ -1,3 +1,5 @@
+;; packages: flyspell-lazy
+
 ;; source https://emacs.stackexchange.com/questions/20679/enable-greek-spellchecking
 ;; download greek dictionary for hunspell https://sourceforge.net/projects/grspell/
 ;; sudo apt install hunspell
@@ -5,7 +7,6 @@
 ;; test in terminal with <hunspell -d el_GR> and then mistype a greek word
 ;; add configuration
 
-;; flyspell-lazy
 
 ;; improve performance when using flyspell
 (require 'flyspell-lazy)
