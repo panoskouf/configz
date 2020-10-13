@@ -78,7 +78,10 @@
 (setq whitespace-style (quote
   ( face tabs tab-mark)))
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'before-save-hook
+          (lambda ()
+            (unless (eq major-mode 'markdown-mode)
+              (delete-trailing-whitespace))))
 
 ;; todo add function to cycle through .org/(only?) files in this folder
 

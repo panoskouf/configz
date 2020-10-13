@@ -1,0 +1,9 @@
+[
+  {
+    "key": "cmd+shift+h",
+    "command": "workbench.action.terminal.newWithCwd",
+    "args": {
+      "cwd": "${fileDirname}"
+    }
+  }
+]

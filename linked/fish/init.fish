@@ -118,6 +118,16 @@ alias drives='df -h';
 alias usage='du -h -d1'
 
 # scripts
+
+
+alias youtube-dl-best='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio" '
+alias youtube-dl-480='youtube-dl -f "bestvideo[height<=480][ext=mp4]+bestaudio[ext=m4a]" '
+alias youtube-dl-720='youtube-dl -f "bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]" '
+alias youtube-dl-4k='echo -e "This will transcode the video from webm to h264 which could take a long time\n\n"; youtube-dl -f "bestvideo[ext=webm]+bestaudio[ext=m4a]" --recode-video mp4 '
+alias youtube-dl-mp3='youtube-dl --extract-audio -f bestaudio[ext=mp3] --no-playlist '
+# extract audio  with ffmpeg -i source.mp4 new.mp3
+
+
 alias lang='/usr/local/scripts/runOnBoot.sh';
 alias λανγ='/usr/local/scripts/runOnBoot.sh';
 
