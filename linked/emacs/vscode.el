@@ -12,5 +12,5 @@
    (global-set-key "\C-s" 'save-buffer)
    (global-set-key "\C-w" 'kill-this-buffer)
 
-   (global-set-key (kbd "C-S-P") 'smex)
+;;   (global-set-key (kbd "C-S-P") 'smex)
 ;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
