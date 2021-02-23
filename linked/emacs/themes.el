@@ -49,7 +49,7 @@
   "Enables a dark theme."
   (interactive)
   (base-theme-mode)
-  (load-theme 'spacemacs-dark t)
+  ;;(load-theme 'spacemacs-dark t)
   (fix-org-bullets)
   )
 
@@ -57,7 +57,7 @@
   "Enables a light theme."
   (interactive)
   (base-theme-mode)
-  (load-theme 'spacemacs-light t)
+  ;;(load-theme 'spacemacs-light t)
   (fix-org-bullets)
   )
 

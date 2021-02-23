@@ -1,6 +1,0 @@
-# rename me to fish_vars
-set VARS_SOURCED true
-set GIT_USERNAME '#$(@#A'
-set GIT_MAIL '#@$T'
-set GIT_WORK_USERNAME '#$(@#'
-set GIT_WORK_MAIL '#@$'

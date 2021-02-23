@@ -15,18 +15,18 @@
     ;;(setq initial-buffer-choice filename)))
 
 ;; initial window size
-;;(setq initial-frame-alist
-;;      '(
-;;        (width . 60) ; character
-;;        (height . 25) ; lines
-;;        ))
+(setq initial-frame-alist
+      '(
+        (width . 60) ; character
+        (height . 25) ; lines
+        ))
 
 ;; default/sebsequent window size
-;;(setq default-frame-alist
-;;      '(
-;;        (width . 60) ; character
-;;        (height . 25) ; lines
-;;        ))
+(setq default-frame-alist
+      '(
+        (width . 60) ; character
+        (height . 25) ; lines
+        ))
 
 ;; backup config for emacs files
 (setq backup-directory-alist `(("." . "~/.backup/emacs")))

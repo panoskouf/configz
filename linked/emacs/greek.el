@@ -26,7 +26,8 @@
 (global-set-key (kbd "<S-dead-diaeresis> Υ") "Ϋ")
 
 ;; make control meta keybindings work
-(require 'reverse-im)
+;;(require 'reverse-im)
+(load-file (concat emacsdir "reverse-im.el"))
 (reverse-im-activate "greek")
 
 ;; semicolon in greek is in q button - normalize this

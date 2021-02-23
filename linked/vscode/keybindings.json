@@ -1,9 +1,13 @@
 [
+  // https://stackoverflow.com/questions/39599514/vs-code-add-a-new-file-under-the-selected-working-directory
   {
-    "key": "cmd+shift+h",
-    "command": "workbench.action.terminal.newWithCwd",
-    "args": {
-      "cwd": "${fileDirname}"
-    }
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
   }
 ]

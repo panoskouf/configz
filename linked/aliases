@@ -1,96 +1,86 @@
-# old aliases - TODO: update according to init.fish
 
-# --------------------------- commands -------------------------------------
-# alias sc="sudo /etc/init.d/screen-cleanup start && screen -S name"
-alias emacs="XLIB_SKIP_ARGB_VISUALS=1 emacs26"
-alias e="XLIB_SKIP_ARGB_VISUALS=1 emacs26"
-alias emx="emacs -nw "
-alias upd="sudo apt-fast update"
-alias upg="sudo apt-fast upgrade"
-alias py3="python3"
+# git
+alias g.='git add .'
+alias gb='git branch -vv'
+alias gnb='git checkout -b '
+alias grb='git branch -d '
+alias grfb='git branch -D '
+alias gl="git log --graph --oneline --pretty=format:'%C(reset) %C(#4a7aff)%h %C(magenta)-%C(#637a82)%d %s %C(#db9ad2)(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gla='git log --graph --decorate --oneline --abbrev-commit --all'
+alias gu='git push'
+alias gd='git pull'
+alias gdr='git pull --rebase'
+alias gdru='git pull --rebase --autostash'
+alias gdnr='git pull --no-rebase'
+alias gs='git status -sb'
+alias gsp='git stash pop'
+alias gsm='git stash save '
+# https://github.com/so-fancy/diff-so-fancy
+alias g~='git diff'
+alias g~~='git diff --staged'
+# todo these need autocompletions
+alias ga='git add'
+alias gap='git add -p'
+alias gc='git commit'
+# amend only for local commit
+alias gca='git commit --amend'
+alias gcm='git commit -m'
+alias ghcm='git commit --no-verify -m '
+alias gcl='git clone'
+alias gco='git checkout'
+alias master='gco master'
+alias gcp='git cherry-pick --no-edit'
+alias gcpa='git cherry-pick --abort'
+alias gm='git merge'
+alias gma='git merge --abort'
+alias gr='git reset'
+alias grv='git revert'
+alias grv='git revert --abort'
 
-# https://askubuntu.com/questions/235866/set-emacs-nw-as-default-editor
-export EDITOR="emacs26 -nw"
-export VISUAL="env XLIB_SKIP_ARGB_VISUALS=1 emacs26"
+# undo a specific old commit: just do:  g revert <commit hash>
 
-# some vars live here for now
-export SCRIPTS="/usr/local/scripts/"
+# delete unpushed commits # check git rebase --onto https://stackoverflow.com/questions/3197413/how-do-i-delete-unpushed-git-commits
 
-# --------------------------- gpg -------------------------------------
-. ~/sh_vars
+# reset rewrites history, use it only for local not-pushed commits
+# Delete the most recent commit, keeping the work you\'ve done'
+alias gfs='git reset --soft HEAD~1'
+# Delete the most recent commit, destroying the work you\'ve done
+alias gfh='git reset --hard HEAD~1'
+# revert does not rewrite history
+# git revert HEAD~5 # this will revert just the 5th commit from the end
+# git revert HEAD~5..HEAD # this will revert the last 5 commits
 
-alias enc="gpg2 -e -r $MAIL"
-alias enc2="gpg2 -e -r "
+# more -> https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
 
-function dec {
-  file=$1
-  fileNew=${file%????}
-  gpg2 -d $file > $fileNew
-  rm $file
-}
+# https://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repository-was-originally-cloned-fr
 
-alias enc-all-org="gpg2 -r $MAIL --encrypt-files *.org && shred -u *.org"
-alias dec-all="gpg2 --decrypt-files *.gpg && rm *.gpg"
+alias open="xdg-open"
+alias myip="curl http://myip.dnsomatic.com && echo ''"
+alias lan-ip="hostname -I | cut -d' ' -f1"
+alias htop="sudo htop"
+alias duh="du -h -d 0 [^.]*"
 
-# --------------------------- misc -------------------------------------
-# alert when task finish example:   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-#youtube-dl
-alias ytdl="youtube-dl --ignore-errors -o '%(title)s.%(ext)s'"
-alias ytformat="youtube-dl -F"
-alias ytdlaudio="youtube-dl -f bestaudio --ignore-errors -o '%(title)s.%(ext)s'"
-
-# Get week number
-alias week='date +%V'
-
-# Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
-
-# Enable aliases to be sudo’ed
-alias sudo='sudo '
-
-# Flatpack
-alias flDesDir='/var/lib/flatpak/exports/share/applications/'
-# override desktop files from here to ~/.local/share/applications/
-
-# --------------------------- git -------------------------------------
-alias g="git"
-alias ga="git add"
-alias gap="git add -p"
-alias gb="git branch"
-alias gc="git commit"
-alias gcl="git clone"
-alias gcm="git commit -m"
-alias gco="git checkout"
-alias gd="git diff"
-alias gds="git diff --staged"
-alias gl="git log --graph --decorate --oneline --abbrev-commit"
-alias gla="git log --graph --decorate --oneline --abbrev-commit --all"
-alias gm="git merge"
-alias gu="git push"
-# alias guu"sh update.sh && git add . && git commit -m 'updates' && git push"
-alias gd="git pull"
-alias gdnr="git pull --no-rebase"
-alias gr="git reset"
-alias gs="git status -sb"
+# vscode
+alias em="emacs -nw"
+alias emacs="/usr/bin/env XLIB_SKIP_ARGB_VISUALS=1 emacs27 %F"
 
 
-# --------------------------- colors -------------------------------------
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias ls='ls --color=auto'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias c="code ."
+alias d="env BROWSER=none npm run dev" # todo fallback: npm run start
+alias chrome-no-cors="cd ~/scratch; and nohup google-chrome --disable-web-security --user-data-dir=~/scratch > /dev/null 2>&1 &; cd -"
 
-colorflag="--color"
-# List all files colorized in long format
-alias l="ls -lF ${colorflag}"
-# List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
-# List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
-# Always use color output for `ls`
-alias ls="command ls ${colorflag}"
+# ls related
+alias lg="ls -la | grep "
+alias lsd="ls -d */ "
+alias l="ls -a --color=auto -I \'.\' -I \'..\' ";
+alias ll="ls -lah --color=auto -I \'.\' -I \'..\' ";
+
+# creates a node repl that has access to global installed packages
+alias repl="NODE_PATH=$(npm root -g) node"
+
+
+# Node js Scripts
+export NS='/home/panoskouf/code/scripts/node_scripts'
+# create react component folder
+alias rc="node ${NS}/rcts.mjs "
+
