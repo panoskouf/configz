@@ -60,11 +60,11 @@ alias lan-ip="hostname -I | cut -d' ' -f1"
 alias htop="sudo htop"
 alias duh="du -h -d 0 [^.]*"
 
+# emacs
+alias emt="emacs27 -nw"
+function emc { nohup /usr/bin/env XLIB_SKIP_ARGB_VISUALS=1 emacs27 $1 >/dev/null 2>&1 & }
+
 # vscode
-alias em="emacs -nw"
-alias emacs="/usr/bin/env XLIB_SKIP_ARGB_VISUALS=1 emacs27 %F"
-
-
 alias c="code ."
 alias d="env BROWSER=none npm run dev" # todo fallback: npm run start
 alias chrome-no-cors="cd ~/scratch; and nohup google-chrome --disable-web-security --user-data-dir=~/scratch > /dev/null 2>&1 &; cd -"
